@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн Библиотека</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Онлайн Библиотека</h1>
+        <form id="bookForm">
+            <input type="text" id="title" placeholder="Название книги" required>
+            <input type="text" id="author" placeholder="Автор книги" required>
+            <input type="number" id="year" placeholder="Год издания" required>
+            <input type="number" id="fileSize" placeholder="Размер файла (для eBook)" min="0">
+            <select id="format">
+                <option value="">Выберите формат (для eBook)</option>
+                <option value="pdf">PDF</option>
+                <option value="mobi">MOBI</option>
+                <option value="epub">EPUB</option>
+            </select>
+            <label>
+                <input type="checkbox" id="isIssued"> Выдана
+            </label>
+            <label>
+                <input type="checkbox" id="isEBook"> Это электронная книга
+            </label>
+            <button type="submit">Добавить книгу</button>
+        </form>
+        <h2>Список книг</h2>
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Автор</th>
+                    <th>Год</th>
+                    <th>Статус</th>
+                    <th>Тип</th>
+                    <th>Формат</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Сюда будут добавляться книги -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
